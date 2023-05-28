@@ -1,14 +1,84 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Booleans</title>
+    <title>Rock-Paper-Scissors</title>
   </head>
   <body>
     <p>Rock Paper Scissors</p>
-    <button>Rock</button>
-    <button>Paper</button>
-    <button>Scissors</button>
-    
+    <button onclick="
+      let computerMove='';
+      const num=Math.random();
+      console.log(num);
+      if(num >=0 && num < 1/3){
+        computerMove = 'Rock';
+      }
+      else if(num >= 1/3 && num < 2/3 ){
+        computerMove = 'Paper';
+      }else if(num >=2/3 && num < 1){
+        computerMove = 'Scissors';
+      }
+      let result='';
+      console.log(computerMove);
+      if(computerMove === 'Rock'){
+        result='Tie.';
+      }else if(computerMove === 'Paper'){
+        result = 'You lose';
+      }else if(computerMove === 'Scissors'){
+        result = 'You win';
+      }
+
+      alert(`Your move Rock. Computer move ${computerMove}. ${result}`);
+    ">Rock</button>
+    <button onclick="
+      let computerMove='';
+      const num=Math.random();
+      console.log(num);
+      if(num >=0 && num < 1/3){
+        computerMove = 'Rock';
+      }
+      else if(num >= 1/3 && num < 2/3 ){
+        computerMove = 'Paper';
+      }else if(num >=2/3 && num < 1){
+        computerMove = 'Scissors';
+      }
+      let result='';
+      console.log(computerMove);
+      if(computerMove === 'Rock'){
+        result='You win.';
+      }else if(computerMove === 'Paper'){
+        result = 'Tie.';
+      }else if(computerMove === 'Scissors'){
+        result = 'You lose.';
+      }
+
+      alert(`Your move paper. Computer move ${computerMove}. ${result}`);
+    ">Paper</button>
+    <button onclick=" 
+      let computerMove='';
+      const num=Math.random();
+      console.log(num);
+      if(num >=0 && num < 1/3){
+        computerMove = 'Rock';
+      }
+      else if(num >= 1/3 && num < 2/3 ){
+        computerMove = 'Paper';
+      }else if(num >=2/3 && num < 1){
+        computerMove = 'Scissors';
+      }
+      let result='';
+      console.log(computerMove);
+      if(computerMove === 'Rock'){
+        result='You lose.';
+      }else if(computerMove === 'Paper'){
+        result = 'You win.';
+      }else if(computerMove === 'Scissors'){
+        result = 'Tie.';
+      }
+
+      alert(`Your move Scissor. Computer move ${computerMove}. ${result}`);
+    ">Scissors</button>
+
+
     <script>
       
     </script>
