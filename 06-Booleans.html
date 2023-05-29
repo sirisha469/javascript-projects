@@ -5,8 +5,6 @@
   </head>
   <body>
     <script>
-    //true
-    //false
     console.log(typeof true);
     
     console.log(3>5);
@@ -29,6 +27,41 @@
     }else{
       console.log('You cannot drive');
     }
+    
+
+    //truty and falsy values
+    //falsy value: false 0 '' NaN undefined null
+    if(0){
+      console.log('true');
+    }else{
+      console.log('false');
+    }
+
+    //Not a Number(NaN)
+    console.log('text'/5);
+    //undefined
+    let variable;
+    console.log(variable);
+
+    //Ternery operator
+    const msg = true ?  0 : 1;
+    console.log(msg);
+    false ? 'Hello' : console.log('Hi');
+
+    const result = 0 ? 'truthy' : 'falsy';
+    console.log(result);
+    //Guard operator(&&) AND operator
+    false && console.log('hello');
+
+    const message = 5 && 'hello';
+    console.log(message);
+
+    //default operator(||) OR operator
+    const cur= 'EUR' || 'USD'; //EUR - Euros, USD - united states dollers
+    console.log(cur);
+    const currency= undefined || 'USD';
+    console.log(currency);
+
   </script>
   </body>
 </html>
