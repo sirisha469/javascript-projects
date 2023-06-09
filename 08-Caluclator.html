@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Caluclator</title>
+  </head>
+  <body>
+    <p>Caluclator</p>
+    <p>
+      <button onclick="
+        updateCaluclation('1');
+      ">1</button>
+      <button onclick="
+        updateCaluclation('2');
+      ">2</button>
+      <button onclick="
+        updateCaluclation('3');
+      ">3</button>
+      <button onclick="
+        updateCaluclation('+');
+      ">+</button>
+    </p>
+    <p>
+      <button onclick="
+        updateCaluclation('4');
+      ">4</button>
+      <button onclick="
+        updateCaluclation('5');
+      ">5</button>
+      <button onclick="
+        updateCaluclation('6');
+      ">6</button>
+      <button onclick="
+        updateCaluclation('-');
+      ">-</button>
+    </p>
+    <p>
+      <button onclick="
+        updateCaluclation('7');
+      ">7</button>
+      <button onclick="
+        updateCaluclation('8');
+      ">8</button>
+      <button onclick="
+        updateCaluclation('9');
+      ">9</button>
+      <button onclick="
+        updateCaluclation('*');
+      ">*</button>
+    </p>
+    <p>
+      <button onclick="
+        updateCaluclation('0');
+      ">0</button>
+      <button onclick="
+        updateCaluclation('.');
+      ">.</button>
+      <button onclick="
+        caluclation=eval(caluclation);
+        console.log(caluclation);
+        //caluclation='';
+        localStorage.setItem('value',caluclation);
+      ">=</button>
+      <button onclick="
+        updateCaluclation('/');
+      ">/</button>
+    </p>
+    <p>
+      <button onclick="
+        caluclation = '';
+        localStorage.setItem('value',caluclation);
+      ">clear</button>
+    </p>
+
+    <script>
+      let cal=localStorage.getItem('value') || '';
+      console.log(cal);
+      let caluclation=''; 
+
+      function updateCaluclation(number){
+        caluclation += number;
+        console.log(caluclation);
+        localStorage.setItem('value',caluclation);
+      }
+
+      // function saveCaluclation(){
+      //   localStorage.setItem('value',caluclation);
+      // }
+    </script>
+  </body>
+</html>

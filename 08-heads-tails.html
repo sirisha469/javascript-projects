@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Heads-Tails-Game</title>
+  </head>
+  <body>
+    <button onclick="
+      playGame('Heads');
+    ">Heads</button>
+    <button onclick="
+      playGame('Tails');
+    ">Tails</button>
+
+<script>
+  // const score = {
+  //   wins:0,
+  //   losses:0
+  // };
+
+  const score = JSON.parse(localStorage.getItem('score')) || {wins: 0, losses: 0};
+
+  console.log(score);
+
+  function playGame(guess){
+    const randomNum = Math.random();
+    const result = randomNum < 0.5 ? 'Heads': 'Tails';
+
+    const res = guess === result ? 'You win': 'You lose';
+    console.log(res);
+    res === 'You win'? score.wins++: score.losses++;
+    console.log(score);
+
+    localStorage.setItem('score', JSON.stringify(score));
+    alert(`Your guess ${guess}. computer choice ${result}. ${res}
+wins:${score.wins} losses:${score.losses}`);
+
+  }
+</script>
+  </body>
+  
+</html>

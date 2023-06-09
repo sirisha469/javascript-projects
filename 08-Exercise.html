@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>08-Exercise-objects</title>
+  </head>
+  <body>
+    <script>
+      const product = {
+        'Product-name': 'Basketball',
+        price: 2095,
+        'delivery-time': '3 days'
+      };
+      console.log(product);
+
+      product.price = 2595;
+      console.log(product); 
+      console.log(product['delivery-time']);
+
+      const product1 = {
+        name: 'clock',
+        price: 500
+      };
+      const product2 = {
+        name: 'bottle',
+        price: 150
+      };
+
+      const lessExpensive = comparePrice(product1, product2);
+      console.log(lessExpensive);
+
+      //const lessPrice=0;
+      function comparePrice(product1, product2){
+        if(product1.price > product2.price){
+          return product2.price;
+        }else{
+          return product1.price;
+        }
+      }
+
+      //8e
+      function isSameProduct(product_1, product_2){
+        return product_1.name === product_2.name && product_1.price === product_2.price;
+      }
+
+      const product_1 = {
+        name: 'shirt',
+        price: 600
+      };
+
+      const product_2 = {
+        name: 'short',
+        price: 450
+      };
+
+      const product_3 = {
+        name: 'shirt',
+        price: 600
+      };
+
+      const result1 = isSameProduct(product_1,product_2);
+      console.log(result1);
+
+      const result2 = isSameProduct(product_1,product_3);
+      console.log(result2);
+      //8f
+      console.log('Good Morning'.toLowerCase());
+      //8g
+      console.log('test'.repeat(2));
+      
+    </script>
+  </body>
+</html>
