@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+  </head>
+  <body>
+    <button>hello</button>
+    <button class="js-button">Second button</button>
+
+    <script>
+  
+      console.log(document.title);
+      document.title = 'changed';
+
+      console.log(document.body);
+      console.log(typeof document.body);
+
+      console.log(document.body.innerHTML);
+      document.body.innerHTML = 'changed';
+      document.body.innerHTML = '<button>Good job</button>'
+
+
+      //document.querySelector(): lets us get any element from the page and put it inside javascript 
+      console.log(document.querySelector('button').innerHTML);
+      document.querySelector('button').innerHTML = 'Changed';
+      //sceond button
+      //console.log(document.querySelector('.js-button'));
+      const buttonElement = document.querySelector('.js-button');
+      console.log(buttonElement);
+
+      //DOM combines JS and HTML together. It gives JS full control of the webpage.
+      
+      document.body.innerHTML = 'hello';
+      document.title = 'Good job!'; //It will change the <title>. DOM(Document object model) -> Good job!
+      
+    </script>
+  </body>
+</html>
