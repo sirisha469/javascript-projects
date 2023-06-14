@@ -18,6 +18,8 @@
       playGame('Scissors');
     ">Scissors</button>
 
+    <p class="js-result"></p>
+    <p class="js-moves"></p>
     <p class="js-score"></p>
 
     <button onclick=" 
@@ -25,6 +27,7 @@
       score.loses = 0;
       score.ties = 0;
       localStorage.removeItem('score');
+      updateScoreElement();
     ">Reset Score</button>
 
     <script>
@@ -37,8 +40,7 @@
 
       let score = JSON.parse(localStorage.getItem('score')) || { wins:0, loses:0, ties:0};
 
-      document.querySelector('.js-score')
-        .innerHTML = `wins:${score.wins}, loses:${score.loses}, Ties:${score.ties}`;
+      updateScoreElement();
 
       //console.log(JSON.parse(localStorage.getItem('score')));//score is in string format convert to string using JSON
 
@@ -97,10 +99,24 @@
 
         localStorage.setItem('score', JSON.stringify(score)); //here msg is string. converting score(num) to string using JSON 
 
-        alert(`Your move ${playerMove}. Computer move ${computerMove}. ${result}
-wins:${score.wins} loses:${score.loses} Ties:${score.ties}`);
+        updateScoreElement();
+
+        document.querySelector('.js-result')
+        .innerHTML = result;
+        
+        document.querySelector('.js-moves')
+        .innerHTML = `You ${playerMove} - ${computerMove} Computer`;
+
+//         alert(`Your move ${playerMove}. Computer move ${computerMove}. ${result}
+// wins:${score.wins} loses:${score.loses} Ties:${score.ties}`);
 
       }
+
+      function updateScoreElement(){
+        document.querySelector('.js-score')
+        .innerHTML = `wins:${score.wins}, loses:${score.loses}, Ties:${score.ties}`;
+      }
+
 
       function pickComputerMove(){
         const num=Math.random();
