@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM-Exercise</title>
+  </head>
+  <body>
+    <button class="js-9a">9a</button>
+    <button class="js-9b">9b</button>
+    </br></br></br>
+    <input placeholder="Name" class="js-input" onkeydown="
+      //console.log(event.key);
+      let key=event.key;
+      if(key === 'Enter'){
+        printOnPage();
+      }
+    ">
+    <button onclick="
+      // let inputElement= document.querySelector('.js-input');
+      // let name=inputElement.value;
+      // document.querySelector('.js-name').innerHTML = `Your name is: ${name}`;
+
+      printOnPage();
+
+    ">submit</button>
+    <p class="js-name"></p>
+
+    <script>
+
+      console.log(document.querySelector('.js-9a').innerHTML);
+
+      document.querySelector('.js-9b').innerHTML = '9b done!';
+
+      function printOnPage(){
+        let inputElement= document.querySelector('.js-input');
+        let name=inputElement.value;
+        document.querySelector('.js-name').innerHTML = `Your name is: ${name}`;
+      }
+      
+      
+    </script>
+  </body>
+</html>
