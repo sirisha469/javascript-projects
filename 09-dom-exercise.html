@@ -4,9 +4,12 @@
     <title>DOM-Exercise</title>
   </head>
   <body>
+    <!-- #1 -->
     <button class="js-9a">9a</button>
     <button class="js-9b">9b</button>
     </br></br></br>
+
+    <!-- #2 -->
     <input placeholder="Name" class="js-input" onkeydown="
       //console.log(event.key);
       let key=event.key;
@@ -20,9 +23,26 @@
       // document.querySelector('.js-name').innerHTML = `Your name is: ${name}`;
 
       printOnPage();
-
     ">submit</button>
     <p class="js-name"></p>
+
+    <!-- #3 -->
+    <!-- onkeyup -->
+    <!-- what ever we entered on input box it dispaly on below it works when we delete also -->
+    <input class="js-input-keyup" onkeyup="
+      //console.log(event.key);
+      let inputValue = document.querySelector('.js-input-keyup');
+      document.querySelector('.js-keyup-display').innerHTML = inputValue.value;
+    ">
+    <p class="js-keyup-display"></p>
+
+    <!-- #4 -->
+    <input placeholder="price" class="js-input-price">
+    <button onclick="
+      let inputVal = document.querySelector('.js-input-price');
+      document.querySelector('.js-price').innerHTML = Number(inputVal.value);
+    ">calculate</button>
+    <p class="js-price"></p>
 
     <script>
 
