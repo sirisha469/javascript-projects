@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Projects</title>
+    <style>
+      body{
+        font-family: Arial;
+      }
+
+      .subscribe-button{
+        border: none;
+        background-color: black;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-weight: bold;
+        border-radius: 50px;
+        cursor: pointer;
+        margin-bottom: 30px;
+      }
+
+      .is-subscribed{
+        background-color: rgb(240,240,240);
+        color: black;
+      }
+
+      .cost-input{
+        font-size: 15px;
+        /*
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        */
+        padding: 10px;
+      }
+
+      .calculate-button{
+        background-color: green;
+        color: white;
+        border: none;
+        padding:12px 15px;
+        font-size: 15px;
+        cursor:pointer;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- Subscribe button  -->
+
+    <p>YouTube Subscribe Button</p>
+    <button onclick="
+    subscribe();
+    // const buttonElement = document.querySelector('.js-subscribe-button');
+
+    // if(buttonElement.innerText === 'Subscribe'){
+    //   buttonElement.innerHTML = 'Subscribed';
+    // }else{
+    //   buttonElement.innerHTML = 'Subscribe';
+    // }
+    " class="js-subscribe-button subscribe-button">
+    Subscribe
+    </button>
+
+    <!-- Amazon Shipping -->
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping</p>
+    <p>Orders over $40 = Free shipping</p>
+    <input placeholder="Cost of order" class="js-cost-input cost-input" onkeydown="
+      // console.log('typing');
+      // console.log(event);
+      // console.log(event.key);
+      // if(event.key === 'Enter')
+      // {
+      //   calculateTotal();
+      // }
+
+      handleCostKeyDown(event);
+    ">
+    <!-- click, keydowns => events
+    onclick, onkeydown => event listeners -->
+    <button onclick="
+      calculateTotal();
+    " class="calculate-button">Calculate</button>
+    <p class="js-total-cost"></p>
+    
+    <script>
+      //special case in string
+      console.log('25'-5);
+      //If a string only contains a number and we do -, *, / => the string will be converted into a number
+      console.log('25'+5);
+
+      //window object
+      window.console.log('window');
+      window.document();
+      window.alert();
+      //ww don't have to type 'window.' JS will automatically add it.
+
+      function handleCostKeyDown(event){
+        console.log(event.key);
+        if(event.key === 'Enter')
+        {
+          calculateTotal();
+        }
+      }
+
+      function subscribe(){
+        const buttonElement = document.querySelector('.js-subscribe-button');
+
+        if(buttonElement.innerText === 'Subscribe'){
+          buttonElement.innerHTML = 'Subscribed';
+          buttonElement.classList.add('is-subscribed');
+        }else{
+          buttonElement.innerHTML = 'Subscribe';
+          buttonElement.classList.remove('is-subscribed');
+        }
+      }
+
+      function calculateTotal(){
+        const inputElement = document.querySelector('.js-cost-input');
+        //if the inputElement is a non html tag we are using .value.
+        let cost = Number(inputElement.value);
+        //console.log(cost);
+        //console.log(typeof cost);
+        //DOM .value always give string format - converting string to number (Number())
+
+        if(cost < 40){
+          cost += 10;
+        }
+
+        document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+      }
+    </script>
+  </body>
+</html>
