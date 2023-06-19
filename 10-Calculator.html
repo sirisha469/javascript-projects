@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles/10-Calculator.css">
+  </head>
+  <body>
+    <p class="js-result result"></p>
+    <p>
+      <button class="cal-button gray-button" onclick="
+        updateCaluclation('1');
+      ">1</button>
+      <button class="cal-button gray-button" onclick="
+        updateCaluclation('2');
+      ">2</button>
+      <button class="cal-button gray-button" onclick="
+        updateCaluclation('3');
+      ">3</button>
+      <button class="cal-button orange-button" onclick="
+        updateCaluclation('+');
+      ">+</button>
+    </p>
+    <p>
+      <button class="cal-button gray-button" onclick="
+        updateCaluclation('4');
+      ">4</button>
+      <button class="cal-button gray-button" onclick="
+        updateCaluclation('5');
+      ">5</button>
+      <button class="cal-button gray-button" onclick="
+        updateCaluclation('6');
+      ">6</button>
+      <button class="cal-button orange-button" onclick="
+        updateCaluclation('-');
+      ">-</button>
+    </p>
+    <p>
+      <button class="cal-button gray-button" onclick="
+        updateCaluclation('7');
+      ">7</button>
+      <button class="cal-button gray-button" onclick="
+        updateCaluclation('8');
+      ">8</button>
+      <button class="cal-button gray-button" onclick="
+        updateCaluclation('9');
+      ">9</button>
+      <button class="cal-button orange-button" onclick="
+        updateCaluclation('*');
+      ">*</button>
+    </p>
+    <p>
+      <button class="cal-button gray-button" onclick="
+        updateCaluclation('0');
+      ">0</button>
+      <button class="cal-button gray-button" onclick="
+        updateCaluclation('.');
+      ">.</button>
+      <button class="cal-button gray-button" onclick="
+        caluclation=eval(caluclation);
+        console.log(caluclation);
+        //caluclation='';
+        localStorage.setItem('value',caluclation);
+        document.querySelector('.js-result').innerHTML = caluclation;
+        ">=</button>
+      <button class="cal-button orange-button" onclick="
+        updateCaluclation('/');
+      ">/</button>
+    </p>
+    <p>
+      <button class="cal-button gray-button clear-button" onclick="
+        caluclation = '';
+        localStorage.setItem('value',caluclation);
+        document.querySelector('.js-result').innerHTML = caluclation;
+      ">Clear</button>
+    </p>
+
+  
+
+    <script>
+      let cal=localStorage.getItem('value') || '';
+      console.log(cal);
+      let caluclation=''; 
+
+      function updateCaluclation(number){
+        caluclation += number;
+        console.log(caluclation);
+        localStorage.setItem('value',caluclation);
+
+        document.querySelector('.js-result').innerHTML = caluclation;
+        
+      }
+
+      // function saveCaluclation(){
+      //   localStorage.setItem('value',caluclation);
+      // }
+    </script>
+  </body>
+</html>

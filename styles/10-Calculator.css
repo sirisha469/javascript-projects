@@ -1,0 +1,31 @@
+body{
+  background-color: black;
+}
+
+.cal-button{
+  border: none;
+  padding: 10px 15px;
+  border-radius: 60px;
+  color: white;
+  margin-right: 5px;
+  height: 60px;
+  width: 60px;
+  font-size: 26px;
+}
+
+.gray-button{
+  background-color: rgb(51,51,51);
+}
+
+.orange-button{
+  background-color: orange;
+}
+
+.clear-button{
+  font-size: 16px;
+}
+
+.result{
+  font-size:40px;
+  color: white;
+}
