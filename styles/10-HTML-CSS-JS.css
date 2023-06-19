@@ -1,0 +1,61 @@
+.amazon-button{
+  background-color: rgb(255, 216, 20);
+  padding: 8px 50px;
+  border:none;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor:pointer;
+}
+
+.uber-request{
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  font-size: 12px;
+  margin-top: 20px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.uber-schedule{
+  background-color: rgb(230,230,230);
+  color: black;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  font-size: 12px;
+  font-weight: bold;
+  cursor:pointer;
+}
+
+.toggle-button{
+  background-color: rgb(230,230,230);
+  color: black;
+  cursor: pointer;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: none;
+  font-size:15px;
+}
+.is-toggled{
+  background-color: black;
+  color: white;
+}
+
+.amazon-calculate{
+  background-color: green;
+  color:white;
+  padding: 12px 10px;
+  border:none;
+  cursor: pointer;
+}
+
+.input-value{
+  padding: 10px 10px;
+}
+
+.error-msg{
+  color: red;
+}

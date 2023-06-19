@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML-CSS-JS-Together</title>
+    <link rel="stylesheet" href="styles/10-HTML-CSS-JS.css">
+  </head>
+  <body>
+    <!-- 10a -->
+    <button class="amazon-button">Add to Cart</button>
+    </br></br></br>
+    <!-- 10b -->
+    <button class="uber-request">Request now</button>
+    <button class="uber-schedule">Schedule for later</button>
+    </br></br></br>
+    <!-- 10c -->
+    <button class="js-button" >Test</button>
+    </br></br></br>
+    <!-- 10d -->
+    <button class="toggle-button js-gaming" onclick="
+      const gaming = document.querySelector('.toggle-button');
+      if(!gaming.classList.contains('is-toggled')){
+        gaming.classList.add('is-toggled');
+      }else{
+        gaming.classList.remove('is-toggled');
+      }
+    ">Gaming</button>
+    <!-- 10e -->
+    </br></br></br>
+    <button class="toggle-button js-game" onclick="
+      toggle('.js-game');
+    ">Gaming</button>
+    <button class="toggle-button js-music" onclick="
+      toggle('.js-music');
+    ">Music</button>
+    <button class="toggle-button js-tech" onclick="
+      toggle('.js-tech');
+    ">Tech</button>
+
+    <!-- 10g -->
+    </br></br></br>
+    <button class="toggle-button js-game1" onclick="
+      toggleExtension('.js-game1');
+    ">Gaming</button>
+    <button class="toggle-button js-music1" onclick="
+      toggleExtension('.js-music1');
+    ">Music</button>
+    <button class="toggle-button js-tech1" onclick="
+      toggleExtension('.js-tech1');
+    ">Tech</button>
+
+    <!-- 10h -->
+    </br></br></br>
+    <input class="js-input-value input-value" onkeydown="
+      //console.log(event.key);
+      if(event.key === 'Enter'){
+        amazonCalculation();
+      }
+    ">
+    <button class="amazon-calculate" onclick="
+      amazonCalculation();
+    ">Caluclate</button>
+    <p class="js-cal"></p>
+    <p class="js-error error-msg"></p>
+
+    <script src="Scripts/10-HTML-CSS-JS.js"></script>
+  </body>
+</html>
