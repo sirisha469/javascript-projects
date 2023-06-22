@@ -6,6 +6,7 @@
   </head>
   <body>
     <script>
+      /*
       const myArray = [10, 20, 30];
       console.log(myArray);
 
@@ -53,6 +54,31 @@
           arr[i]=arr[i]+2;
         }
         console.log(arr);
+      }
+      */
+
+      const arr1 = [1,2,3];
+      const arr2 = arr1;
+      arr2.push(4);
+      console.log(arr1);
+      console.log(arr2);
+
+      const arr3 = arr2.slice();
+      arr3.push(5);
+      console.log(arr2);
+      console.log(arr3);
+      //destructuring
+      const [first,second] = [1,2,3];
+
+      //break and continue
+      for(let i=1;i<=10;i++){
+        if(i===3){
+          continue;
+        }
+        console.log(i);
+        if(i===8){
+          break;
+        }
       }
 
     </script>
