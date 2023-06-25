@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Functions</title>
+    
+  </head>
+  <body>
+    <script>
+      
+      greeting();
+      function greeting(){
+        console.log('Hello');
+      }
+
+      greeting();
+
+      const num = 2;
+
+      const function1 = function greeting(){
+        console.log("HI");
+      }
+     
+      console.log(function1);
+      console.log(typeof function1);
+      function1();
+
+      const object = {
+        num: 2,
+        fun: function greeting(){
+          console.log("Hello2");
+        },
+        fun1: function(){
+          console.log("function without name");
+        }
+      }
+      object.fun();
+
+      function display(parameter){
+        console.log(parameter);
+      }
+      display(8);
+
+      //Example for passing a function into another function
+      function run(param){
+        //param - having the function as parameter
+        param();
+      }
+      //calling run method
+      run(function(){
+        console.log('Hello3');
+      });
+    </script>
+  </body>
+</html>
