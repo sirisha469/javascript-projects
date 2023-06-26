@@ -6,7 +6,7 @@
   </head>
   <body>
     <script>
-      
+      /*
       greeting();
       function greeting(){
         console.log('Hello');
@@ -49,6 +49,16 @@
       run(function(){
         console.log('Hello3');
       });
+      */
+
+      //setTimeOut(function, time_in_milliSeconds)
+      setTimeout(function() {
+        console.log('timeout');
+        console.log('timeout2');
+      }, 3000);
+      //Asynchronus code: won't wait for a line to finish before to the next line
+      //It will execute 'next line' first after 3 sec setTimeOut function will executes
+      console.log('next line');
     </script>
   </body>
 </html>
