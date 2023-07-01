@@ -52,6 +52,7 @@
       */
 
       //setTimeOut(function, time_in_milliSeconds)
+      /*
       setTimeout(function() {
         console.log('timeout');
         console.log('timeout2');
@@ -59,6 +60,24 @@
       //Asynchronus code: won't wait for a line to finish before to the next line
       //It will execute 'next line' first after 3 sec setTimeOut function will executes
       console.log('next line');
+
+      setInterval(function(){
+        console.log('interval')
+      }, 3000);
+      
+      console.log('next line 2');
+      */
+
+      [
+        'make dinner',
+        'wash dishes',
+        'eatch youtube'
+      ].forEach(function(value, index){
+        console.log(value);
+        console.log(index);
+      });
+
+
     </script>
   </body>
 </html>
