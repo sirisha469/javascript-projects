@@ -6,7 +6,7 @@
   </head>
   <body>
     <script>
-      /*
+      
       greeting();
       function greeting(){
         console.log('Hello');
@@ -49,10 +49,10 @@
       run(function(){
         console.log('Hello3');
       });
-      */
+      
 
       //setTimeOut(function, time_in_milliSeconds)
-      /*
+      
       setTimeout(function() {
         console.log('timeout');
         console.log('timeout2');
@@ -66,7 +66,7 @@
       }, 3000);
       
       console.log('next line 2');
-      */
+      
 
       [
         'make dinner',
@@ -77,6 +77,52 @@
         console.log(index);
       });
 
+      const regularFunction = function(){
+        console.log('hello1');
+      };
+
+      const regularFunction1 = function(para1, para2){
+        console.log('hello2');
+        return 5;
+      };
+
+      const arrowFunction = (para1, para2) => {
+        console.log('hello3');
+        return 5;
+      };
+      arrowFunction(1,2);
+
+      //one parameter
+      const oneParam = (param) => {
+        console.log(param+1);
+      };
+      oneParam(2);
+
+      //one line
+      const oneLine = () => {return 2+3};
+      const oneLine1 = () => 2+3;
+      console.log(oneLine());
+      console.log(oneLine1());
+
+      //arrow function in foreach loop
+      [
+        'make dinner',
+        'wash dishes',
+        'eatch youtube'
+      ].forEach((value, index) => {
+        console.log(value);
+        console.log(index);
+      });
+
+      const object2 = {
+        method: () => {
+
+        },
+        method(){
+
+        }
+      };
+      
 
     </script>
   </body>

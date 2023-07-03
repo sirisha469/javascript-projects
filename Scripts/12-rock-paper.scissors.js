@@ -25,9 +25,14 @@
      let isAutoPlaying = false;
      let intervalId;
 
+    // arrow function
+    //  const autoPlay = () => {
+
+    //  };
      function autoPlay(){
       if(!isAutoPlaying){
-        intervalId = setInterval(function(){
+        //arrow function is used
+        intervalId = setInterval(() => {
           const playerMove = pickComputerMove();
           playGame(playerMove);
         }, 1000); //1sec
