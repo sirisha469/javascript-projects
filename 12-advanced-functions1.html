@@ -12,10 +12,18 @@
 
       const buttonElement = document.querySelector('.js-button');
 
-      buttonElement.addEventListener('click', () => {
+      const eventListener = () => {
         console.log('click');
-      }); //after onclick - click is an event
+      };
+
+      buttonElement.addEventListener('click', eventListener); //after onclick - click is an event
       //for function inside function we use arrow function
+      //remove event listener
+      buttonElement.removeEventListener('click', eventListener);
+
+      buttonElement.addEventListener('click', () => {
+        console.log('click1');
+      });
     </script>
   </body>
 </html>

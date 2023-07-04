@@ -13,6 +13,7 @@ body{
 
 .todo-input-grid{
   align-items: stretch;
+  margin-bottom: 10px;
 }
 
 .name-input,
@@ -27,6 +28,7 @@ body{
   color:white;
   font-size: 15px;
   cursor: pointer;
+
 }
 
 .delete-button{
